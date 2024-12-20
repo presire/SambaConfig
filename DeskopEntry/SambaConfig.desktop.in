@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=SambaConfig %ver%
+GenericName=SambaConfig
+Comment=Configure Samba settings through the Graphical User Interface.
+Exec=%install_dir%/bin/SambaConfig.sh %F
+Icon=%install_dir%/share/icons/hicolor/128x128/apps/SambaConfig.png
+Categories=Utility;Network;
+Keywords=samba;smb;nmb;network;sambaconfig;
+Terminal=false

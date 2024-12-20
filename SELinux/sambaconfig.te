@@ -1,0 +1,48 @@
+# SELinux policy module for Samba configuration management
+module sambaconfig 1.0;
+
+require {
+    type system_dbus_t;
+    type system_bus_type;
+    type policykit_t;
+    type polkit_auth_t;
+    type etc_t;
+    type samba_etc_t;
+    role system_r;
+    attribute domain;
+    class dbus { acquire_svc send_msg };
+    class dir { search read write add_name remove_name };
+    class file { read write open getattr create unlink };
+    class process { fork signal };
+    class fifo_file { read write open getattr };
+    class unix_stream_socket { create connect };
+}
+
+# Type definitions
+type sambaconfig_t;
+type sambaconfig_exec_t;
+typeattribute sambaconfig_t domain;
+
+# Role assignment
+role system_r types sambaconfig_t;
+
+# D-Bus permissions
+allow sambaconfig_t system_dbus_t:dbus { acquire_svc send_msg };
+allow sambaconfig_t system_bus_type:dbus send_msg;
+
+# PolKit permissions
+allow sambaconfig_t policykit_t:dbus { acquire_svc send_msg };
+allow sambaconfig_t polkit_auth_t:dbus send_msg;
+
+# Required file access permissions
+allow sambaconfig_t self:process { fork signal };
+allow sambaconfig_t self:fifo_file { read write open getattr };
+allow sambaconfig_t self:unix_stream_socket { create connect };
+
+# System directory access
+allow sambaconfig_t etc_t:dir { search read };
+allow sambaconfig_t etc_t:file { read open getattr };
+
+# Samba configuration access
+allow sambaconfig_t samba_etc_t:dir { search read write add_name remove_name };
+allow sambaconfig_t samba_etc_t:file { read write open getattr create unlink };

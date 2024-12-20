@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD polkit Policy Configuration 1.0//EN"
+"http://www.freedesktop.org/software/polkit/policyconfig-1.dtd">
+<policyconfig>
+  <vendor>Presire</vendor>
+  <vendor_url>https://github.com/presire</vendor_url>
+
+  <action id="org.presire.sambaconfig.client.ReadSambaFile">
+    <description>Read the Samba client configuration file (smb.conf)</description>
+    <message>Access to Samba client configuration files via SambaConfig requires privileges</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.presire.sambaconfig.client.WriteSambaFile">
+    <description>Write the Samba client configuration file (smb.conf)</description>
+    <message>Access to Samba client configuration files via SambaConfig requires privileges</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.presire.sambaconfig.client.TestParm">
+    <description>Execute the testparm command</description>
+    <message>Syntax checking of Samba client configuration files via SambaConfig requires privileges</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.presire.sambaconfig.client.ChangeAuthMode">
+    <description>Change the read/write access permissions for the Samba client configuration file (smb.conf)</description>
+    <message>Modify the PolKit file to change access privileges.</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+  </action>
+  
+</policyconfig>

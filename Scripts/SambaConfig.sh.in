@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+appname="SambaConfig"
+
+# use -f to make the readlink path absolute
+dirname="$(dirname -- "$(readlink -f -- "${0}")" )"
+
+if [ "$dirname" = "." ]; then
+    dirname="$PWD/$dirname"
+fi
+
+# Initialize interpreter path
+export LD_LIBRARY_PATH="$dirname/../lib64:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="$dirname/../lib:$LD_LIBRARY_PATH"
+
+# Run SambaConfig binary
+"$dirname/$appname" "$@" 

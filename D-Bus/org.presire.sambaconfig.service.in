@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.presire.sambaconfig
+Exec=%install_dir%/bin/SambaConfigHelper
+User=root

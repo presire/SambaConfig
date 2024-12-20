@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- -*- XML -*- -->
+<!DOCTYPE busconfig PUBLIC
+ "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+
+<busconfig>
+
+  <!-- This configuration file specifies the required security policies
+       for the PolicyKit to work. -->
+
+  <!-- Only user root can own the PackageKit service -->
+  <!-- PackageKitサービスを所有できるのはrootユーザのみである -->
+  <policy user="root">
+    <allow own="org.presire.sambaconfig"/>
+    <allow send_destination="org.presire.sambaconfig"/>
+    <allow receive_sender="org.presire.sambaconfig"/>
+  </policy>
+
+  <!-- Certain %USER% users can invoke the interface - we'll reject callers using PolicyKit -->
+  <!-- Only certain %USER% can call interface methods -->
+  <!-- %USER%ユーザはインターフェースを呼び出すことができる -->
+  <!-- あるいはPolKitを使用して拒否する -->
+  <policy context="%USER%">
+    <allow send_destination="org.presire.sambaconfig"/>
+    <allow receive_sender="org.presire.sambaconfig"/>
+  </policy>
+
+  <!-- Other users cannot invoke the interface - we'll reject callers using PolicyKit -->
+  <!-- Deny anyone to invoke methods on the interfaces -->
+  <!-- その他のユーザはインターフェースを呼び出すことはできない -->
+  <!-- あるいはPolKitを使用して拒否する -->
+  <policy context="default">
+    <deny send_destination="org.presire.sambaconfig"/>
+    <deny receive_sender="org.presire.sambaconfig"/>
+  </policy>
+
+</busconfig>

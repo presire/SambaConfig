@@ -1,0 +1,5 @@
+<RCC version="1.0">
+    <qresource prefix="/DesktopIcon">
+        <file>Image/SambaConfig.png</file>
+    </qresource>
+</RCC>

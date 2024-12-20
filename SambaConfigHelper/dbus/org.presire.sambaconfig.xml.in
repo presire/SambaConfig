@@ -1,0 +1,33 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.presire.sambaconfig.client">
+    <method name="ReadSambaFile">
+      <arg type="i" direction="out"/>
+      <arg name="strFilePath" type="s" direction="in"/>
+      <arg name="strContents" type="s" direction="out"/>
+      <arg name="strErrMsg" type="s" direction="out"/>
+    </method>
+    <method name="WriteSambaFile">
+      <arg type="i" direction="out"/>
+      <arg name="strSrcSambaFile" type="s" direction="in"/>
+      <arg name="strBakSambaFile" type="s" direction="in"/>
+      <arg name="strTmpSambaFile" type="s" direction="in"/>
+      <arg name="strErrMsg" type="s" direction="out"/>
+      <!-- <arg name="serverObjects" type="a{sas}" direction="in"/> -->
+      <!-- <annotation name="org.qtproject.QtDBus.QtTypeName.In1" value="ServerObjects"/> -->
+      <!-- <annotation name="org.qtproject.QtDBus.QtTypeName.Out1" value="ServerObjects"/> -->
+    </method>
+    <method name="ExecuteTestParm">
+      <arg type="i" direction="out"/>
+      <arg name="strTestParmComandPath" type="s" direction="in"/>
+      <arg name="aryOptions" type="as" direction="in"/>
+      <arg name="strStdMsg" type="s" direction="out"/>
+      <arg name="strErrMsg" type="s" direction="out"/>
+    </method>
+    <method name="ChangeAuthMode">
+      <arg type="i" direction="out"/>
+      <arg name="bAuth" type="b" direction="in"/>
+      <arg name="strErrMsg" type="s" direction="out"/>
+    </method>
+  </interface>
+</node>

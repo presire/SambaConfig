@@ -1,0 +1,38 @@
+<RCC>
+    <qresource prefix="/ScreenIcon">
+        <file>Image/Add.png</file>
+        <file>Image/AddPressed.png</file>
+        <file>Image/Arrow.png</file>
+        <file>Image/Back.png</file>
+        <file>Image/Check.png</file>
+        <file>Image/CloseCursor.png</file>
+        <file>Image/CloseCursorPressed.png</file>
+        <file>Image/CloseCursor2.png</file>
+        <file>Image/Critical.png</file>
+        <file>Image/Directory.png</file>
+        <file>Image/DirectorySym.png</file>
+        <file>Image/Drawer.png</file>
+        <file>Image/File.png</file>
+        <file>Image/File2.png</file>
+        <file>Image/FileButton.png</file>
+        <file>Image/FileButtonPressed.png</file>
+        <file>Image/FileNetworkButton.png</file>
+        <file>Image/FileNetworkButtonPressed.png</file>
+        <file>Image/HomeButton.png</file>
+        <file>Image/HomeButtonPressed.png</file>
+        <file>Image/Key.png</file>
+        <file>Image/KeyFileButton.png</file>
+        <file>Image/KeyFileButtonPressed.png</file>
+        <file>Image/Lock.png</file>
+        <file>Image/OpenDirectory.png</file>
+        <file>Image/OpenDirectoryPressed.png</file>
+        <file>Image/Qt.png</file>
+        <file>Image/RemoteWindow.png</file>
+        <file>Image/Remote_Download.png</file>
+        <file>Image/Remote_Upload.png</file>
+        <file>Image/SambaFile.png</file>
+        <file>Image/UpDirectory.png</file>
+        <file>Image/UpDirectoryPressed.png</file>
+        <file>Image/Warning.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,16 @@
+<RCC version="1.0">
+    <qresource prefix="/CustomQML">
+        <file>CustomQML/CompletePopup.qml</file>
+        <file>CustomQML/ErrorDialog.qml</file>
+        <file>CustomQML/ErrorPopup.qml</file>
+        <file>CustomQML/ExtendButton.qml</file>
+        <file>CustomQML/ExtendTextField.qml</file>
+        <file>CustomQML/PasswordDialog.qml</file>
+        <file>CustomQML/QuitDialog.qml</file>
+        <file>CustomQML/ReloadDialog.qml</file>
+        <file>CustomQML/RestartDialog.qml</file>
+        <file>CustomQML/SaveDialog.qml</file>
+        <file>CustomQML/SSHOptionListView.qml</file>
+        <file>CustomQML/WarningDialog.qml</file>
+    </qresource>
+</RCC>
