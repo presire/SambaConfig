@@ -50,8 +50,8 @@ This article uses SUSE Linux Enterprise (x86_64).
 <br>
 <br>
 
-# Execute SambaConfig  
-## 5.1 **For PC**
+# 2. Execute SambaConfig  
+## 2.1 **For PC**
 ### Main screen  
 |SambaConfig Main (Server Mode)|
 |---|
@@ -68,20 +68,6 @@ You can return to Home Screen by pressing [Home] button or [Shift] + [Esc] butto
 <br>
 
 If your mouse has [Forward] or [Back] button, you can go back and forward through each menu screen.  
-<br>
-
-### Samba / NMB service start / stop from this software  
-|SambaConfig Side Panel (Server Mode)|SambaConfig Side Panel (Server Mode)|
-|---|---|
-|![](HC/SambaConfig_for_PC_Systemd_1.png)|![](HC/SambaConfig_for_PC_Systemd_2.png)|
-<br>
-
-Samba / NMB can be started and stopped from this software.  
-
-* [Start / Restart]  
-  Start or restart Samba / NMB.  s
-* [Stop]
-  Stop Samba / NMB.  
 <br>
 
 ### Edit Samba configuration  
